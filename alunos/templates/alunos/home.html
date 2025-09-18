@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escola - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #1976d2;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .welcome-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            border: 1px solid #e3f2fd;
+        }
+
+        .welcome-title {
+            color: #1976d2;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .welcome-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #546e7a;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            border: 1px solid #e3f2fd;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            color: #1976d2;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .feature-text {
+            color: #546e7a;
+            line-height: 1.5;
+        }
+
+        .admin-button {
+            display: inline-block;
+            background: #1976d2;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid #1976d2;
+            margin-top: 1rem;
+        }
+
+        .admin-button:hover {
+            background: white;
+            color: #1976d2;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #1976d2;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-text {
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .welcome-card {
+                padding: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🎓 Sistema de Gestão Escolar</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="welcome-card">
+                <h1 class="welcome-title">Bem-vindo ao Sistema de Gestão Escolar</h1>
+                <p class="welcome-text">
+                    Uma plataforma moderna para gerenciamento de alunos, 
+                    turmas e atividades educacionais. Simplifique sua gestão 
+                    escolar com ferramentas intuitivas e eficientes.
+                </p>
+                
+                <a href="/admin/" class="admin-button">
+                    🔧 Acessar Painel Administrativo
+                </a>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Gestão de Alunos</h3>
+                    <p class="feature-text">
+                        Cadastre e gerencie informações dos alunos de forma 
+                        organizada e eficiente.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Relatórios</h3>
+                    <p class="feature-text">
+                        Acesse relatórios detalhados e acompanhe o desempenho 
+                        dos estudantes.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3 class="feature-title">Segurança</h3>
+                    <p class="feature-text">
+                        Sistema seguro com controle de acesso e proteção 
+                        de dados sensíveis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                © 2025 Sistema de Gestão Escolar - Desenvolvido com Django por Andressa Antunes. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
